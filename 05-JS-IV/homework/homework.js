@@ -115,8 +115,12 @@ function actualizarPassword(usuario, nuevaPassword) {
 function agregarAmigo(usuario, nuevoAmigo) {
   // "usuario" tiene una propiedad llamada "amigos" que es un array
   // Agrega "nuevoAmigo" al final de ese array
-  // Devuelve el objeto "usuario"
+  // Devuelve el objeto "usuario"   // usuarios {propiedadamigos []}
   // // Tu código:
+
+  usuario.amigos.push(nuevoAmigo);
+
+  return usuario;
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -124,7 +128,12 @@ function pasarUsuarioAPremium(usuarios) {
   // Cada objeto "usuario" tiene la propiedad "esPremium"
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
-  // Tu código:
+  // Tu código:    //usuario {[usuarios]}
+
+  for(var i = 0; i < usuarios.length; i++) {
+    usuarios[i].esPremium = true;
+  }
+  return usuarios;
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -133,7 +142,16 @@ function sumarLikesDeUsuario(usuario) {
   // Cada objeto "post" tiene una propiedad llamada "likes" que es un entero (int/integer)
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
-  // Tu código:
+  // Tu código:    // usuario {post[posts{propiedad likes}]}
+
+  var suma = 0;
+
+  for(var i = 0; i < usuario.posts.length; i++) {
+    suma = suma + usuario.posts[i].likes;
+  }
+
+  return suma;
+
 }
 
 function agregarMetodoCalculoDescuento(producto) {
@@ -145,8 +163,12 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.precio -> 20
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
-  // Tu código:
-
+  // Tu código:     //producto { calcularPrecioDescuento = func}     producto.precio * producto.porcntajeDeDescuento
+   
+  producto.calcularPrecioDescuento = function () {
+    return this.precio -(this.precio * this.porcentajeDeDescuento);
+  }
+  return producto;
 }
 
 // No modificar nada debajo de esta línea
