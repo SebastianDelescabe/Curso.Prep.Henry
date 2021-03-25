@@ -1,0 +1,61 @@
+body{ background-color: rgb(255, 255, 255);
+}
+
+hr{
+    clear: both;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    float :left;
+    margin-right: 25px;
+    margin-left: 25px;
+    border:1px solid;
+    color:black;
+}
+
+h1{
+    text-align: center;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2{
+    font-size:x-large;
+    text-decoration: underline;
+    padding-top: 20px;
+    color:rgb(30, 60, 160);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3{
+    font-size:larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:500;
+}
+
+h4{
+    font-size:larger;
+    font-weight:normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 27px;
+}
+
+.dp{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding:20px;
+    
+}
+
+.all{
+    background-color: rgb(190, 192, 194);
+    margin: 20px;
+    border:2px solid;
+    color:black;
+}
+
