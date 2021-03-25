@@ -53,9 +53,7 @@ p{
 }
 
 .all{
-    background-color: rgb(190, 192, 194);
     margin: 20px;
-    border:2px solid;
-    color:black;
+    border:2px solid black;
 }
 
